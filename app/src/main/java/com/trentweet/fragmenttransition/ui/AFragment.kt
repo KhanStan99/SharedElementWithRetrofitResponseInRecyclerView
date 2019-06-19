@@ -86,12 +86,11 @@ class AFragment : Fragment() {
         val simpleFragmentB = BFragment.newInstance()
 
         bundle.putString("transitionName", transitionName)
-        bundle.putSerializable("movie", currentItem)
+        bundle.putSerializable("model", currentItem)
         simpleFragmentB.arguments = bundle
 
         (activity as MainActivity).showFragmentWithTransition(
-            this, simpleFragmentB, "movieDetail", imageView,
-            transitionName
+            this, "AFragment", imageView
         )
     }
 

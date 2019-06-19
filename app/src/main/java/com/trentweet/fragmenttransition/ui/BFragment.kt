@@ -34,7 +34,7 @@ class BFragment : Fragment() {
 
         val b = arguments
         if (b != null) {
-            val movie = b.getSerializable("movie") as UserListModel
+            val movie = b.getSerializable("model") as UserListModel
             mView.findViewById<ImageView>(R.id.fragment_b_image).transitionName =
                 b.getString("transitionName")
 
